@@ -1,2 +1,13 @@
 @import "tailwindcss";
 
+@theme {
+    --color-midnight: #0f1c26;
+}
+
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}

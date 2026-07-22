@@ -1,14 +1,21 @@
+import Yoko1 from "../assets/Yoko1.avif";
+import Yoko2 from "../assets/Yoko2.avif";
+import Yoko3 from "../assets/Yoko3.avif";
+import Model1 from "../assets/model1.avif";
+import Model2 from "../assets/model2.avif";
+import Model3 from "../assets/model3.avif";
+import Art1 from "../assets/Art1.jpg";
+import Art2 from "../assets/Art2.jpg";
+import Art3 from "../assets/Art3.avif";
+
 export const artworks = [
   {
     id: 1,
     title: "Golden Horizon",
+    Artist: "Razak",
     price: 120000,
     description: "Warm golden sunset over calm waters.",
-    images: [
-      "/assets/nature01.jpg",
-      "/assets/nature01.jpg",
-      "/assets/nature01.jpg",
-    ],
+    images: [Yoko1],
     sizes: ["Small", "Medium", "Large"],
     frames: ["Wood", "Black", "Gold"],
     mediums: ["Canvas", "Glass", "Acrylic"],
@@ -16,27 +23,21 @@ export const artworks = [
   {
     id: 2,
     title: "Urban Silence",
+    Artist: "Razak",
     price: 150000,
     description: "Moody cityscape with modern tones.",
-    images: [
-      "../assets/nature2.jpg",
-      "../assets/nature2.jpg",
-      "../assets/nature2.jpg",
-    ],
+    images: [Yoko2],
     sizes: ["Small", "Medium", "Large"],
     frames: ["Silver", "Black"],
     mediums: ["Canvas", "Metal Print"],
   },
   {
     id: 3,
-    title: "Sunshine Bloom",
+    title: "Classic Bloom",
+    Artist: "Razak",
     price: 150000,
     description: "Moody cityscape with modern tones.",
-    images: [
-      "../assets/shoe1.jpg",
-      "../assets/shoe1.jpg",
-      "../assets/shoe1.jpg",
-    ],
+    images: [Yoko3],
     sizes: ["Small", "Medium", "Large"],
     frames: ["Silver", "Black"],
     mediums: ["Canvas", "Metal Print"],
@@ -44,13 +45,10 @@ export const artworks = [
   {
     id: 4,
     title: "Urban Silence",
+    Artist: "Razak",
     price: 150000,
     description: "Moody cityscape with modern tones.",
-    images: [
-      "../assets/shoe02.jpg",
-      "../assets/shoe02.jpg",
-      "../assets/shoe02.jpg",
-    ],
+    images: [Model1],
     sizes: ["Small", "Medium", "Large"],
     frames: ["Silver", "Black"],
     mediums: ["Canvas", "Metal Print"],
@@ -58,13 +56,10 @@ export const artworks = [
   {
     id: 5,
     title: "Urban Silence",
+    Artist: "Razak",
     price: 150000,
     description: "Moody cityscape with modern tones.",
-    images: [
-      "../assets/shoe3.jpg",
-      "../assets/shoe3.jpg",
-      "../assets/shoe3.jpg",
-    ],
+    images: [Model2],
     sizes: ["Small", "Medium", "Large"],
     frames: ["Silver", "Black"],
     mediums: ["Canvas", "Metal Print"],
@@ -72,13 +67,43 @@ export const artworks = [
   {
     id: 6,
     title: "Urban Silence",
+    Artist: "Razak",
     price: 150000,
     description: "Moody cityscape with modern tones.",
-    images: [
-      "../assets/shoe4.jpg",
-      "../assets/shoe4.jpg",
-      "../assets/shoe4.jpg",
-    ],
+    images: [Model3],
+    sizes: ["Small", "Medium", "Large"],
+    frames: ["Silver", "Black"],
+    mediums: ["Canvas", "Metal Print"],
+  },
+  {
+    id: 7,
+    title: "Urban Silence",
+    Artist: "Razak",
+    price: 150000,
+    description: "Moody cityscape with modern tones.",
+    images: [Art1],
+    sizes: ["Small", "Medium", "Large"],
+    frames: ["Silver", "Black"],
+    mediums: ["Canvas", "Metal Print"],
+  },
+  {
+    id: 8,
+    title: "Urban Silence",
+    Artist: "Razak",
+    price: 150000,
+    description: "Moody cityscape with modern tones.",
+    images: [Art2],
+    sizes: ["Small", "Medium", "Large"],
+    frames: ["Silver", "Black"],
+    mediums: ["Canvas", "Metal Print"],
+  },
+  {
+    id: 9,
+    title: "Urban Silence",
+    Artist: "Razak",
+    price: 150000,
+    description: "Moody cityscape with modern tones.",
+    images: [Art3],
     sizes: ["Small", "Medium", "Large"],
     frames: ["Silver", "Black"],
     mediums: ["Canvas", "Metal Print"],
