@@ -8,14 +8,44 @@ const CartContext = createContext();
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
 
-  // add artwork to cart
+  // add artwork to cart — merges with an existing identical item
+  // (same id + same size/frame/medium) by bumping quantity instead
+  // of creating a duplicate row
   const addToCart = (artwork) => {
-    setCart((prevCart) => [...prevCart, artwork]);
+    setCart((prevCart) => {
+      const existingIndex = prevCart.findIndex(
+        (item) =>
+          item.id === artwork.id &&
+          item.selectedSize === artwork.selectedSize &&
+          item.selectedFrame === artwork.selectedFrame &&
+          item.selectedMedium === artwork.selectedMedium,
+      );
+
+      if (existingIndex > -1) {
+        const updated = [...prevCart];
+        updated[existingIndex] = {
+          ...updated[existingIndex],
+          quantity: (updated[existingIndex].quantity || 1) + 1,
+        };
+        return updated;
+      }
+
+      return [...prevCart, { ...artwork, quantity: 1 }];
+    });
   };
 
   // remove item from cart
   const removeFromCart = (id) => {
-    setCart(cart.filter((item) => item.id !== id));
+    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
+  };
+
+  // update quantity for an item already in the cart
+  const updateQuantity = (id, quantity) => {
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.id === id ? { ...item, quantity: Math.max(1, quantity) } : item,
+      ),
+    );
   };
 
   // clear cart
@@ -29,6 +59,7 @@ export function CartProvider({ children }) {
         cart,
         addToCart,
         removeFromCart,
+        updateQuantity,
         clearCart,
       }}
     >

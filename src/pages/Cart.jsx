@@ -3,6 +3,8 @@ import AOS from "aos";
 
 import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom"; //
+import { getCartOrderLink } from "../utils/whatsapp";
+import { getCartOrderEmailLink } from "../utils/email";
 
 export default function Cart() {
   useEffect(() => {
@@ -26,7 +28,7 @@ export default function Cart() {
     };
   }, []);
 
-  const { cart, removeFromCart, updateQuantity } = useCart(); // assume updateQuantity exists
+  const { cart, removeFromCart, updateQuantity, clearCart } = useCart(); // assume updateQuantity exists
 
   // Compute totals
   const subtotal = cart.reduce(
@@ -35,6 +37,16 @@ export default function Cart() {
   );
   const shipping = subtotal > 200 ? 0 : 15; // free shipping over $200
   const total = subtotal + shipping;
+
+  const handleOrderViaWhatsApp = () => {
+    window.open(getCartOrderLink(cart, total), "_blank");
+    clearCart();
+  };
+
+  const handleOrderViaEmail = () => {
+    window.location.href = getCartOrderEmailLink(cart, total);
+    clearCart();
+  };
 
   // Empty cart state
   if (cart.length === 0) {
@@ -206,8 +218,18 @@ export default function Cart() {
                 </div>
               </div>
 
-              <button className="w-full mt-6 bg-amber-700 hover:bg-amber-800 text-white py-3 rounded-xl font-medium transition-colors duration-300">
-                Proceed to Order
+              <button
+                onClick={handleOrderViaWhatsApp}
+                className="w-full mt-6 bg-amber-700 hover:bg-amber-800 text-white py-3 rounded-xl font-medium transition-colors duration-300"
+              >
+                Proceed to Order via WhatsApp
+              </button>
+
+              <button
+                onClick={handleOrderViaEmail}
+                className="w-full mt-3 border border-stone-300 hover:bg-stone-100 text-stone-700 py-3 rounded-xl font-medium transition-colors duration-300"
+              >
+                Order via Email instead
               </button>
 
               <Link

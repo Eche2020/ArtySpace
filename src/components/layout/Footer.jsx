@@ -51,15 +51,17 @@ export default function Footer() {
 
         {/* Social Links – scales down a bit on very small screens */}
         <div
-          data-aos="fade-down"
-          data-aos-delay="200"
-          className="flex items-center gap-6 text-xl sm:text-2xl"
+          data-aos="fade-uo"
+          data-aos-delay="100"
+          className="flex items-center gap-6 text-xl sm:text-2xl" 
         >
           <a
             href="https://twitter.com/yourhandle"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-500 transition-transform transform hover:scale-110 duration-200"
+            data-aos="fade-down"
+            data-aos-delay="200"
           >
             <FaTwitter />
           </a>
@@ -68,6 +70,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-red-500 transition-transform transform hover:scale-110 duration-200"
+          
           >
             <FaYoutube />
           </a>
@@ -76,6 +79,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-500 transition-transform transform hover:scale-110 duration-200"
+            
           >
             <FaFacebookF />
           </a>

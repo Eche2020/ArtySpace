@@ -32,14 +32,23 @@ export default function ArtworkDetails() {
 
   const [showModal, setShowModal] = useState(false);
   const [addedItem, setAddedItem] = useState(null);
+  const [selectedSize, setSelectedSize] = useState(null);
+  const [selectedFrame, setSelectedFrame] = useState(null);
+  const [selectedMedium, setSelectedMedium] = useState(null);
 
   if (!art) {
     return <div className="p-6">Artwork not found.</div>;
   }
 
   const handleAddToCart = () => {
-    addToCart(art);
-    setAddedItem(art);
+    const itemToAdd = {
+      ...art,
+      selectedSize,
+      selectedFrame,
+      selectedMedium,
+    };
+    addToCart(itemToAdd);
+    setAddedItem(itemToAdd);
     setShowModal(true);
   };
 
@@ -120,7 +129,13 @@ export default function ArtworkDetails() {
                     {art.sizes.map((size) => (
                       <button
                         key={size}
-                        className="px-3 py-2 rounded-lg border border-gray-200 hover:border-gray-900 hover:bg-gray-100 transition-all duration-300 text-xs font-medium focus:outline-none focus:ring-1 focus:ring-gray-900"
+                        type="button"
+                        onClick={() => setSelectedSize(size)}
+                        className={`px-3 py-2 rounded-lg border transition-all duration-300 text-xs font-medium focus:outline-none focus:ring-1 focus:ring-gray-900 ${
+                          selectedSize === size
+                            ? "border-gray-900 bg-gray-900 text-white"
+                            : "border-gray-200 hover:border-gray-900 hover:bg-gray-100"
+                        }`}
                       >
                         {size}
                       </button>
@@ -137,7 +152,13 @@ export default function ArtworkDetails() {
                     {art.frames.map((frame) => (
                       <button
                         key={frame}
-                        className="px-3 py-2 rounded-lg border border-gray-200 hover:border-gray-900 hover:bg-gray-100 transition-all duration-300 text-xs font-medium focus:outline-none focus:ring-1 focus:ring-gray-900"
+                        type="button"
+                        onClick={() => setSelectedFrame(frame)}
+                        className={`px-3 py-2 rounded-lg border transition-all duration-300 text-xs font-medium focus:outline-none focus:ring-1 focus:ring-gray-900 ${
+                          selectedFrame === frame
+                            ? "border-gray-900 bg-gray-900 text-white"
+                            : "border-gray-200 hover:border-gray-900 hover:bg-gray-100"
+                        }`}
                       >
                         {frame}
                       </button>
@@ -154,7 +175,13 @@ export default function ArtworkDetails() {
                     {art.mediums.map((medium) => (
                       <button
                         key={medium}
-                        className="px-3 py-2 rounded-lg border border-gray-200 hover:border-gray-900 hover:bg-gray-100 transition-all duration-300 text-xs font-medium focus:outline-none focus:ring-1 focus:ring-gray-900"
+                        type="button"
+                        onClick={() => setSelectedMedium(medium)}
+                        className={`px-3 py-2 rounded-lg border transition-all duration-300 text-xs font-medium focus:outline-none focus:ring-1 focus:ring-gray-900 ${
+                          selectedMedium === medium
+                            ? "border-gray-900 bg-gray-900 text-white"
+                            : "border-gray-200 hover:border-gray-900 hover:bg-gray-100"
+                        }`}
                       >
                         {medium}
                       </button>

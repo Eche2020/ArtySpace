@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { getSingleOrderLink } from "../utils/whatsapp";
 
 function ArtworkCard({ art }) {
   return (
@@ -20,6 +21,15 @@ function ArtworkCard({ art }) {
         >
           View Details
         </Link>
+          <a
+            href={getSingleOrderLink(art)}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="text-sm bg-green-600 hover:bg-green-700 text-white px-3 py-1.5 rounded-full transition"
+          >
+            Order Now
+          </a>
       </div>
     </div>
   );

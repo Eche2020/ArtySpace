@@ -47,7 +47,6 @@ export default function Hero() {
   };
 
 
-  console.log(Slider);
   return (
     <div className="flex items-center justify-center min-h-screen bg-midnight relative overflow-hidden">
   <div className="container py-8 px-4 sm:px-6 lg:px-8">
