@@ -35,16 +35,18 @@ export default function Contact() {
           {/* LEFT SECTION – Large Image (order swapped for mobile stacking) */}
           <div className="order-2 lg:order-1 flex flex-col gap-6">
             <div className="flex gap-4 sm:gap-6 justify-center lg:justify-start flex-wrap sm:flex-nowrap">
+              {/* TODO: refine alt text */}
               <img
                 src={About2}
-                alt="Gallery preview 1"
+                alt="Artwork by Razak Collections"
                 data-aos="fade-up"
                 loading="lazy"
                 className="w-full max-w-[192px] h-auto aspect-[6/5] object-cover bg-gray-800"
               />
+              {/* TODO: refine alt text */}
               <img
                 src={About1}
-                alt="Gallery preview 2"
+                alt="Artwork by Razak Collections"
                 data-aos="fade-down"
                 data-aos-delay="200"
                 loading="lazy"

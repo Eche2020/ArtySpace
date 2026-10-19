@@ -27,7 +27,7 @@ export default function Category1() {
         {/* Fixed sizes replaced: max-w + aspect-ratio */}
         <img
           src={Image1}
-          alt=""
+          alt="Aerial view of a busy Lagos market street with yellow danfo buses and the UBA tower"
           className="w-full max-w-[600px] h-auto aspect-[3/4] object-cover"
         />
 
@@ -47,7 +47,7 @@ export default function Category1() {
       >
         <img
           src={Image2}
-          alt=""
+          alt="Red-and-white lighthouse perched on a rocky coastline beneath a dramatic stormy sky"
           className="w-full max-w-[420px] h-auto aspect-[7/8] object-cover"
         />
 

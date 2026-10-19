@@ -41,7 +41,7 @@ const AboutPage = () => {
           <div className="order-2 lg:order-1">
             <img
               src={About3}
-              alt="Main gallery showcase"
+              alt="Aerial view of a busy Lagos street, a setting for Razak Collections' photography"
               data-aos="fade-right"
               loading="eager" // Critical: load immediately since it's above the fold
               className="w-full h-auto min-h-75 lg:h-125 object-cover bg-gray-800"
@@ -52,16 +52,18 @@ const AboutPage = () => {
           <div className="order-1 lg:order-2 flex flex-col gap-6">
             {/* Upper Part - Two Small Images */}
             <div className="flex gap-4">
+              {/* TODO: refine alt text */}
               <img
                 src={About2}
-                alt="Gallery preview 1"
+                alt="Artwork by Razak Collections"
                 data-aos="fade-up"
                 loading="lazy"
                 className="w-1/2 h-48 object-cover bg-gray-800"
               />
+              {/* TODO: refine alt text */}
               <img
                 src={About1}
-                alt="Gallery preview 2"
+                alt="Artwork by Razak Collections"
                 data-aos="fade-down"
                 data-aos-delay="200"
                 loading="lazy"

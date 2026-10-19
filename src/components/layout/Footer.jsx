@@ -28,7 +28,7 @@ export default function Footer() {
     };
   }, []);
   return (
-    <div className="w-full bg-linear-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-300">
+    <footer className="w-full bg-linear-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Left Section – stacks on mobile, row on sm+ */}
         <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 text-center sm:text-left w-full sm:w-auto">
@@ -45,7 +45,7 @@ export default function Footer() {
 
           {/* Desktop: ml-10; mobile: no excessive margin */}
           <p className="ml-0 sm:ml-4 md:ml-10 text-sm sm:text-base">
-            THOEMKE@LINAS.COM
+            ARTYSPACE.COM
           </p>
         </div>
 
@@ -85,6 +85,6 @@ export default function Footer() {
           </a>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

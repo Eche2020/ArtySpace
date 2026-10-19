@@ -58,13 +58,13 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-5 mb-6 w-full justify-center items-center pb-2">
           <img
             src={Art1}
-            alt=""
+            alt="Yellow café table and folding chairs casting long shadows against a sunlit yellow wall"
             data-aos="fade-right"
             className="w-full max-w-90 h-auto aspect-360/224 object-cover shrink-0 "
           />
           <img
             src={Art2}
-            alt=""
+            alt="Abstract painting with gold and black brushstrokes sweeping across a deep teal background"
             data-aos="fade-left"
             data-aos-delay="200"
             className="w-full max-w-52 h-auto aspect-208/160 object-cover shrink-0"

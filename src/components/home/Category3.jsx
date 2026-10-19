@@ -17,9 +17,10 @@ export default function Category3() {
               className="flex flex-col items-center text-center relative"
             >
               {/* Main image – responsive with aspect ratio */}
+              {/* TODO: refine alt text */}
               <img
                 src={Yoko1}
-                alt="Yoko"
+                alt="Portrait of model Yoko Yamada from a fashion editorial shot in Lagos"
                 className="w-full max-w-[600px] h-auto aspect-[3/4] object-cover
                      ml-0 lg:ml-20"
               />
@@ -51,7 +52,7 @@ export default function Category3() {
               <div className="relative w-full max-w-[384px]">
                 <img
                   src={Yoko2}
-                  alt="Yoko Yamada"
+                  alt="Model Yoko Yamada posing in soft natural light"
                   className="w-full h-auto aspect-[48/35] object-cover"
                 />
               </div>
@@ -64,7 +65,7 @@ export default function Category3() {
               >
                 <img
                   src={Yoko3}
-                  alt=""
+                  alt="Model Yoko Yamada photographed for the 'Something in the Air' series"
                   className="w-full h-auto aspect-[48/35] object-cover"
                 />
               </div>

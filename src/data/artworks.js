@@ -8,6 +8,22 @@ import Art1 from "../assets/Art1.jpg";
 import Art2 from "../assets/Art2.jpg";
 import Art3 from "../assets/Art3.avif";
 
+/**
+ * Artwork catalogue.
+ *
+ * SHAPE NOTICE — the original fields (id, title, Artist, price, description,
+ * images, sizes, frames, mediums) are untouched and nothing about how artworks
+ * are imported/consumed has changed. The following fields are ADDITIVE, purely
+ * so the Shop filters and the detail page have real metadata to render:
+ *
+ *   category    "Portrait" | "Landscape" | "Street"  -> Shop category filter
+ *   year        number                                -> "Newest" sort + detail spec row
+ *   dimensions  string                                -> detail spec row
+ *   editionSize number                                -> "Limited edition of N"
+ *
+ * These values are placeholder metadata inferred from the image assets and the
+ * existing descriptions. Confirm/replace them with the artist's real records.
+ */
 export const artworks = [
   {
     id: 1,
@@ -19,6 +35,10 @@ export const artworks = [
     sizes: ["Small", "Medium", "Large"],
     frames: ["Wood", "Black", "Gold"],
     mediums: ["Canvas", "Glass", "Acrylic"],
+    category: "Landscape",
+    year: 2023,
+    dimensions: "50 × 70 cm",
+    editionSize: 25,
   },
   {
     id: 2,
@@ -30,6 +50,10 @@ export const artworks = [
     sizes: ["Small", "Medium", "Large"],
     frames: ["Silver", "Black"],
     mediums: ["Canvas", "Metal Print"],
+    category: "Portrait",
+    year: 2024,
+    dimensions: "60 × 75 cm",
+    editionSize: 30,
   },
   {
     id: 3,
@@ -41,6 +65,10 @@ export const artworks = [
     sizes: ["Small", "Medium", "Large"],
     frames: ["Silver", "Black"],
     mediums: ["Canvas", "Metal Print"],
+    category: "Portrait",
+    year: 2024,
+    dimensions: "60 × 75 cm",
+    editionSize: 30,
   },
   {
     id: 4,
@@ -52,6 +80,10 @@ export const artworks = [
     sizes: ["Small", "Medium", "Large"],
     frames: ["Silver", "Black"],
     mediums: ["Canvas", "Metal Print"],
+    category: "Portrait",
+    year: 2025,
+    dimensions: "60 × 75 cm",
+    editionSize: 20,
   },
   {
     id: 5,
@@ -63,6 +95,10 @@ export const artworks = [
     sizes: ["Small", "Medium", "Large"],
     frames: ["Silver", "Black"],
     mediums: ["Canvas", "Metal Print"],
+    category: "Street",
+    year: 2024,
+    dimensions: "60 × 90 cm",
+    editionSize: 15,
   },
   {
     id: 6,
@@ -74,6 +110,10 @@ export const artworks = [
     sizes: ["Small", "Medium", "Large"],
     frames: ["Silver", "Black"],
     mediums: ["Canvas", "Metal Print"],
+    category: "Portrait",
+    year: 2023,
+    dimensions: "60 × 75 cm",
+    editionSize: 20,
   },
   {
     id: 7,
@@ -85,6 +125,10 @@ export const artworks = [
     sizes: ["Small", "Medium", "Large"],
     frames: ["Silver", "Black"],
     mediums: ["Canvas", "Metal Print"],
+    category: "Street",
+    year: 2025,
+    dimensions: "70 × 100 cm",
+    editionSize: 10,
   },
   {
     id: 8,
@@ -96,6 +140,10 @@ export const artworks = [
     sizes: ["Small", "Medium", "Large"],
     frames: ["Silver", "Black"],
     mediums: ["Canvas", "Metal Print"],
+    category: "Landscape",
+    year: 2023,
+    dimensions: "90 × 60 cm",
+    editionSize: 15,
   },
   {
     id: 9,
@@ -107,5 +155,9 @@ export const artworks = [
     sizes: ["Small", "Medium", "Large"],
     frames: ["Silver", "Black"],
     mediums: ["Canvas", "Metal Print"],
+    category: "Landscape",
+    year: 2025,
+    dimensions: "90 × 60 cm",
+    editionSize: 15,
   },
 ];

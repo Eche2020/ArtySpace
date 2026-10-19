@@ -28,7 +28,7 @@ export default function Category4() {
               <div data-aos="fade-down" data-aos-delay="200">
                 <img
                   src={model3}
-                  alt=""
+                  alt="Fashion portrait from a yellow-toned editorial series"
                   className="w-full max-w-[400px] h-auto aspect-[10/13] object-cover
                        mb-4 lg:mb-30 ml-0 lg:ml-20"
                 />
@@ -45,7 +45,7 @@ export default function Category4() {
               >
                 <img
                   src={model1}
-                  alt=""
+                  alt="Model Anna Fena photographed against a bright yellow backdrop"
                   className="w-full max-w-[280px] h-auto aspect-[7/8] object-cover drop-shadow-2xl
                        mt-4 lg:mt-0 lg:relative lg:top-20"
                 />
@@ -63,7 +63,7 @@ export default function Category4() {
             >
               <img
                 src={model2}
-                alt=""
+                alt="Fashion portrait in a yellow setting by Razak Collections"
                 className="w-full max-w-[480px] h-auto aspect-[12/17] object-cover
                      mt-4 sm:mt-6 lg:mt-10"
               />

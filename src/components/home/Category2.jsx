@@ -35,7 +35,7 @@ export default function Category2() {
               <div data-aos="fade-down" data-aos-delay="200">
                 <img
                   src={Image1}
-                  alt=""
+                  alt="Mountain landscape beneath a heavy, dramatic sky at golden hour"
                   className="w-full max-w-[400px] h-auto aspect-[10/13] object-cover
                        mb-4 ml-0 lg:mb-[7.5rem] lg:ml-[5rem]"
                 />
@@ -49,7 +49,7 @@ export default function Category2() {
               >
                 <img
                   src={Image3}
-                  alt=""
+                  alt="Close-up of a runner's foot in a grey and blue shoe resting on a stone ledge"
                   className="w-full max-w-[280px] h-auto aspect-[7/8] object-cover drop-shadow-2xl"
                 />
               </div>
@@ -61,9 +61,10 @@ export default function Category2() {
               data-aos-delay="200"
               className="flex flex-col items-center text-center"
             >
+              {/* TODO: refine alt text */}
               <img
                 src={Image2}
-                alt=""
+                alt="Artwork by Razak Collections"
                 className="w-full max-w-[480px] h-auto aspect-[12/17] object-cover
                      mt-4 sm:mt-6 lg:mt-10"
               />
